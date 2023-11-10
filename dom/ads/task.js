@@ -7,6 +7,7 @@ function rot() {
     activeElement++
     rotator[activeElement].classList.add("rotator__case_active")
     if (activeElement === (rotator.length - 1)) {
+        rotator[activeElement].classList.remove("rotator__case_active")
         activeElement = 0;
         rotator[activeElement].classList.add("rotator__case_active")
     }
