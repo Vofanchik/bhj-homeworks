@@ -11,11 +11,11 @@ for (let item of hasTooltip) {
         if (openedTooltips.length > 1) {
             openedTooltips[0].remove()}
                       
-        let tooltipLinkActive = item.querySelector('.tooltip_active');
-        if (tooltipLinkActive) {
+        let tooltipLinkActive = item.nextElementSibling
+        if (tooltipLinkActive && tooltipLinkActive.classList.contains('tooltip_active')) {
             tooltipLinkActive.remove()            
         }else{
-        item.insertAdjacentElement("beforeend", tooltip)
+        item.insertAdjacentElement("afterend", tooltip)
         let attr = item.getAttribute("title")
         tooltip.textContent = attr
         tooltip.classList.add("tooltip_active")

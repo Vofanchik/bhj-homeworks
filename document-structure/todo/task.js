@@ -21,10 +21,9 @@ button.onsubmit = (e)=>{
     e.preventDefault()
 
     let textDo = area.value.trim()
-    if (textDo==''){}
-    else {
-        addToDo(textDo)
-    } 
+    if (textDo!=''){
+        addToDo(textDo)}
+     
     area.value=''
 }
 
