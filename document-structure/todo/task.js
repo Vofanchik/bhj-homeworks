@@ -3,18 +3,11 @@ const button = document.getElementById('tasks__form')
 let area = document.getElementById('task__input')
 
 function addToDo(textDo){
-    let divel = document.createElement('div')
-    divel.classList.add('task')
-    let divtitle = document.createElement('div')
-    divtitle.classList.add('task__title')
-    divtitle.innerText = textDo
-    let ael = document.createElement('a')
-    ael.setAttribute('href','#')
-    ael.classList.add('task__remove')
-    ael.innerHTML = '&times;'
-    divel.appendChild(divtitle)
-    divel.appendChild(ael)
-    tasksList.appendChild(divel)
+    tasksList.insertAdjacentHTML("beforeend", `<div class="task">
+    <div class="task__title">${textDo}</div>
+    <a href="#" class="task__remove">
+    &times;</a></div>`)
+    let ael = tasksList.lastElementChild.lastElementChild
     ael.addEventListener('click', ()=>ael.parentElement.remove())
 }
 button.onsubmit = (e)=>{

@@ -24,16 +24,6 @@ prods.forEach((elem,index)=> {
             <img class="cart__product-image" src = "${image.getAttribute('src')}">
             <div class="cart__product-count">${val.innerText}</div>
             </div>`
-            
-            // let divel = document.createElement('div')
-            // let divco = document.createElement('div')
-            // divco.classList.add('cart__product-count')
-            // divco.innerText = Number(val.innerText)
-            // divel.setAttribute('data-id', proid) 
-            // divel.classList.add('cart__product')
-            // divel.appendChild(image.cloneNode(true))
-            // divel.appendChild(divco)
-            // bag.appendChild(divel)  
             val.innerText = 1
         }   
 
